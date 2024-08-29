@@ -1,4 +1,20 @@
+const { validateInput } = require("./scriptHelper");
+
 // Write your JavaScript code here!
+function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass){
+    const pilotStatus = document.getElementById("pilotStatus");
+    const copilotStatus = document.getElementById("copilotStatus");
+    const fuelStatus = document.getElementById("fuelStatus");
+    const cargoStatus = document.getElementById("cargoStatus");
+    const launchStatus = document.getElementById("launchStatus");
+    const faultyItems = document.getElementById("faultyItems");
+if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || 
+validateInput(fuelLevel) === "Empty" || validateInput(cargoMass) === "Empty"){
+    alert("All fields required!");
+    return;
+}
+
+}
 
 window.addEventListener("load", function() {
 
